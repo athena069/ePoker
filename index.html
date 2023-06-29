@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link href="./libs/vuetify.min.css" rel="stylesheet" />
+    <link href="./static/main.css" rel="stylesheet" />
+
+    <script src="./libs/vue.min.js"></script>
+    <script src="./libs/vue-i18n.js"></script>
+    <script src="./libs/vuetify.min.js"></script>
+    <script src="./libs/vue-router.js"></script>
+    <script src="./libs/qrcode.min.js"></script>
+
+    <script src="./static/lang/en.js"></script>
+    <script src="./static/lang/zh.js"></script>
+
+    <script>
+      const vuetify = new Vuetify({
+        theme: {
+          themes: {
+            light: {
+              primary: "#f1bc8d",
+              secondary: "#b0bec5",
+              accent: "#8c9eff",
+              error: "#b71c1c",
+
+              headerBg: "#06050a",
+              footerBg: "#131419",
+              downloadBg: "#0c0f18",
+              navText: "#d4d6dc",
+              menuBg: "#161920",
+              drawerBg: "#161920",
+              titleText: "#ffffff",
+              contentText: "#969696",
+            },
+          },
+        },
+      });
+      const breakpoint = vuetify.framework.breakpoint;
+
+      const customerServiceLink = "https://www.google.com.tw";
+      function openLink() {
+        window.open(customerServiceLink);
+      }
+
+      const overlayTime = 100;
+
+      var currentURL = window.location.href;
+      currentURL = "https://web.kjaskd.com/download/";
+      var qrImg = null;
+
+      // https://github.com/davidshimjs/qrcodejs
+      function generateQRImg(url) {
+        const newDiv = document.createElement("div");
+        const qr = new QRCode(newDiv, url || currentURL);
+        if (qr) {
+          qrImg = qr._oDrawing._elImage;
+        }
+      }
+
+      generateQRImg();
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <v-app id="inspire" :class="{'mob': isMobile}">
+        <header-component></header-component>
+        <v-main>
+          <router-view></router-view>
+        </v-main>
+        <footer-component></footer-component>
+
+        <!-- start 下载按钮 -->
+        <div class="download-btn" @click="shiwDownloadDialog">
+          <v-img
+            max-width="15px"
+            class="mr-3 mt-n1"
+            src="./static/img/download/xiazaiicon-wap.png"
+          ></v-img>
+          {{$t("download_btn")}}
+        </div>
+        <!-- end 下载按钮 -->
+
+        <!-- start 下载弹窗 -->
+        <v-dialog v-model="downloadDialog" width="350">
+          <v-card
+            class="dialog-bg"
+            :height="this.operatingSystem != 'unknown' ? '300px' : '480px'"
+          >
+            <v-card-title class="d-flex justify-center relative">
+              <v-img
+                class="my-2"
+                :max-width="$i18n.locale == 'en'?'50%':'90%'"
+                :src="$t('download_dialog_title')"
+              ></v-img>
+              <v-btn
+                style="right: 10px; top: 10px"
+                class="absolute"
+                icon
+                @click="downloadDialog = false"
+              >
+                <v-img
+                  max-width="18px"
+                  src="./static/img/dialog/close.png"
+                ></v-img>
+              </v-btn>
+            </v-card-title>
+
+            <v-card-text>
+              <v-btn
+                width="100%"
+                class="rounded my-1"
+                height="45"
+                :color="bgColor"
+                v-for="{icon, i18nKey, event, bgColor, key, textColor, isShow} of btnOptions"
+                :key="key"
+                @click="event"
+                v-if="isShow"
+              >
+                <v-sheet
+                  color="transparent"
+                  width="100%"
+                  class="d-flex justify-center align-center black--text"
+                >
+                  <v-img max-width="23px" :src="icon" class="mr-2"></v-img>
+                  <span class="relative text-16" :style="{'color': textColor}">
+                    {{$t(i18nKey)}}
+                    <v-img
+                      max-width="23px"
+                      v-if="key == 'key1'"
+                      src="./static/img/download/NEW.png"
+                      class="absolute"
+                      style="top: -8px; right: -23px"
+                    ></v-img>
+                  </span>
+                </v-sheet>
+              </v-btn>
+              <template v-if="this.operatingSystem == 'unknown'">
+                <v-sheet
+                  color="#c8cbd4"
+                  class="rounded d-flex justify-center align-center mt-1 text-16"
+                  width="100%"
+                  height="45"
+                >
+                  <v-img
+                    max-width="23px"
+                    src="./static/img/home/icon_ewm.png"
+                    class="mr-2"
+                  ></v-img>
+                  {{$t("home.menu.str4")}}
+                </v-sheet>
+                <div class="mt-4 d-flex justify-center">
+                  <v-sheet class="pa-1">
+                    <v-img max-width="150" :src="qr"></v-img>
+                  </v-sheet>
+                </div>
+              </template>
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+        <!-- end 下载弹窗 -->
+      </v-app>
+    </div>
+    <script src="./static/views/header/header.js"></script>
+    <script src="./static/views/bottom/bottom.js"></script>
+    <script src="./static/views/home/home.js"></script>
+    <script src="./static/views/footer/footer.js"></script>
+    <script src="./static/views/download/download.js"></script>
+    <script src="./static/views/support/support.js"></script>
+    <script src="./static/views/about/about.js"></script>
+    <script src="./static/views/use/use.js"></script>
+    <script src="static/main.js"></script>
+  </body>
+</html>
