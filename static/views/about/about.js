@@ -27,8 +27,8 @@ const aboutComponent = Vue.component("about-component", {
           height="100%"
         >
           <div class="text-28" style="margin-top: 7%">
-            <span class="titleText--text">{{$t("about.str1")}}</span
-            ><span class="primary--text">ePOKER</span>
+            <span class="titleText--text">{{$t("about.str1_1")}}</span
+            ><span class="primary--text">{{$t("about.str1_2")}}</span>
           </div>
           <div class="titleText--text text-12">
             {{$t("about.str2")}}
