@@ -17,7 +17,7 @@ const footerComponent = Vue.component("footer-component", {
   },
   template: `
   <v-sheet
-    class="d-flex flex-column align-center py-8 px-2 footer-component"
+    class="d-flex flex-column align-center py-12 px-2 footer-component"
     color="footerBg"
   >
     <!-- h5 -->
