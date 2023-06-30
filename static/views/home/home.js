@@ -469,6 +469,7 @@ var homeComponent = Vue.component("home-component", {
         class="relative d-flex justify-center"
       >
         <img width="100%" src="./static/img/home/banner_04.png" />
+        <img style="top: 25%;" class="absolute" width="40%" src="./static/img/home/banner_04_01.png" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute d-flex flex-column align-center"
