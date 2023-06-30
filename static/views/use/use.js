@@ -847,7 +847,7 @@ const useComponent = Vue.component("use-component", {
     },
   },
   template: `
-  <v-sheet color="downloadBg" class="use-component pb-7" :class="{hidden: isHidden}">
+  <v-sheet color="downloadBg" class="use-component pb-7" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
       <v-sheet
