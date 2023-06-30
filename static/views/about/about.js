@@ -24,7 +24,7 @@ const aboutComponent = Vue.component("about-component", {
   <v-sheet color="downloadBg" class="about-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
-      <v-sheet width="100%" class="relative d-flex justify-center">
+      <v-sheet color="transparent" width="100%" class="relative d-flex justify-center">
         <img class="contain" width="100%" src="./static/img/about/h5/banner_01.png">
         <v-sheet
           color="transparent"

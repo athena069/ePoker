@@ -27,7 +27,7 @@ const supportComponent = Vue.component("support-component", {
   <v-sheet color="downloadBg" class="support-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
-      <v-sheet width="100%" class="relative d-flex justify-center">
+      <v-sheet color="transparent" width="100%" class="relative d-flex justify-center">
         <img class="contain" width="100%" src="./static/img/support/h5/di.png">
         <v-sheet
           width="100%"
