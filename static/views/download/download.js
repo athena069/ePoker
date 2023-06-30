@@ -5,11 +5,11 @@ const downloadComponent = Vue.component("download-component", {
       qr: null,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.isHidden = false;
-    }, overlayTime);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.isHidden = false;
+  //   }, overlayTime);
+  // },
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -18,8 +18,14 @@ const downloadComponent = Vue.component("download-component", {
   mounted() {
     this.qr = qrImg;
   },
+  methods: {
+    onImageLoaded() {
+      // console.log('圖片載入完成');
+      this.isHidden = false;
+    },
+  },
   template: `
-  <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}">
+  <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
       <v-sheet

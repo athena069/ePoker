@@ -75,11 +75,11 @@ var homeComponent = Vue.component("home-component", {
       qr: null,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.isHidden = false;
-    }, overlayTime);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.isHidden = false;
+  //   }, overlayTime);
+  // },
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -90,12 +90,17 @@ var homeComponent = Vue.component("home-component", {
       this.qrDialog = true;
       this.qr = qrImg;
     },
+    onImageLoaded() {
+      // console.log('圖片載入完成');
+      this.isHidden = false;
+    },
   },
   template: `
   <v-sheet
     color="transparent"
     class="home-component"
     :class="{hidden: isHidden}"
+    v-image-loaded="onImageLoaded"
   >
 
     <!-- start QR弹窗 -->

@@ -4,11 +4,11 @@ const supportComponent = Vue.component("support-component", {
       isHidden: true,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.isHidden = false;
-    }, overlayTime);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.isHidden = false;
+  //   }, overlayTime);
+  // },
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -17,10 +17,14 @@ const supportComponent = Vue.component("support-component", {
   methods: {
     openLink() {
       return openLink();
-    }
+    },
+    onImageLoaded() {
+      // console.log('圖片載入完成');
+      this.isHidden = false;
+    },
   },
   template: `
-  <v-sheet color="downloadBg" class="support-component" :class="{hidden: isHidden}">
+  <v-sheet color="downloadBg" class="support-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
       <v-sheet width="100%" class="relative d-flex justify-center">

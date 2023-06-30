@@ -23,6 +23,28 @@ router.afterEach((to, from, next) => {
   window.scrollTo(0, 0);
 });
 
+
+
+Vue.directive('image-loaded', {
+  bind(el, binding, vnode) {
+    const callback = binding.value;
+    const images = el.getElementsByTagName('img');
+    let loadedImageCount = 0;
+
+    const onImageLoaded = () => {
+      loadedImageCount++;
+
+      if (loadedImageCount === images.length) {
+        callback();
+      }
+    };
+
+    Array.from(images).forEach((image) => {
+      image.addEventListener('load', onImageLoaded);
+    });
+  },
+});
+
 new Vue({
   el: "#app",
   i18n,
