@@ -234,18 +234,19 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img width="100%" src="./static/img/home/h5/banner_04.png" />
+        <img height="100%" width="100%" cover class="absolute" src="./static/img/home/h5/di.png" />
         <v-sheet
           color="transparent"
-          class="mx-auto absolute d-flex flex-column"
+          class="mx-auto d-flex flex-column"
           width="100%"
           height="100%"
+          style="z-index: 1"
         >
           <img
             width="100%"
             :src="$t('home.imgs.src3')"
             class="mx-auto"
-            style="margin: 15% 0"
+            style="margin: 3% 0"
           />
           <v-sheet
             color="transparent"
@@ -253,14 +254,15 @@ var homeComponent = Vue.component("home-component", {
             height="80%"
             class="d-flex flex-column align-center"
           >
-            <div class="text-28" style="margin-top: 5%">
+            <div class="text-28">
               <div class="primary--text mx-2 text-center">
                 {{$t("home.str8")}}
               </div>
             </div>
-            <div class="titleText--text mt-1 text-14 mx-2 text-center">
+            <div class="titleText--text mt-1 text-14 mx-2 text-center" style="margin-bottom: 5%">
               {{$t("home.str9")}}
             </div>
+            <v-img max-width="80%" src="./static/img/home/h5/taizi.png"></v-img>
             <bottom-component></bottom-component>
           </v-sheet>
         </v-sheet>
@@ -484,12 +486,12 @@ var homeComponent = Vue.component("home-component", {
               color="transparent"
               width="100%"
               class="d-flex flex-column"
-              style="margin-top: 5%"
+              style="margin-top: 3%"
             >
-              <div class="text-38" style="width: 40%">
+              <div class="text-36" style="width: 30%">
                 <span class="primary--text"> {{$t("home.str8")}} </span>
               </div>
-              <div class="titleText--text mt-1" style="width: 30%">
+              <div class="titleText--text mt-1" style="width: 25%">
                 {{$t("home.str9")}}
               </div>
             </v-sheet>
