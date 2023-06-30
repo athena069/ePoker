@@ -28,7 +28,7 @@ const supportComponent = Vue.component("support-component", {
     <!-- h5 -->
     <template v-if="isMobile">
       <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/support/h5/di.png">
+        <img class="contain" width="100%" src="./static/img/support/h5/di.png">
         <v-sheet
           width="100%"
           height="100%"
@@ -58,6 +58,7 @@ const supportComponent = Vue.component("support-component", {
               <img
                 width="100%"
                 src="./static/img/support/1.png"
+                class="contain"
               >
               <v-sheet
                 class="absolute d-flex flex-column align-center justify-end"
@@ -79,6 +80,7 @@ const supportComponent = Vue.component("support-component", {
               <img
                 width="100%"
                 src="./static/img/support/2.png"
+                class="contain"
               >
               <v-sheet
                 class="absolute d-flex flex-column align-center justify-end"

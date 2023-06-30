@@ -184,3 +184,6 @@ a {
 .mob .dialog-bg {
   background-image: url("./img/dialog/h5/di_xz.png");
 }
+.contain {
+  object-fit: contain;
+}

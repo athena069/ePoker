@@ -25,7 +25,7 @@ const aboutComponent = Vue.component("about-component", {
     <!-- h5 -->
     <template v-if="isMobile">
       <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/h5/banner_01.png">
+        <img class="contain" width="100%" src="./static/img/about/h5/banner_01.png">
         <v-sheet
           color="transparent"
           class="absolute d-flex flex-column align-center px-2 text-center"

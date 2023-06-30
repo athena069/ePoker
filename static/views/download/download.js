@@ -53,8 +53,8 @@ const downloadComponent = Vue.component("download-component", {
             </div>
             <div class="titleText--text text-12">{{$t("download.str2")}}</div>
             <v-sheet color="transparent" width="100%" class="d-flex justify-center" style="margin-top: 10%;">
-              <img width="45%" src="./static/img/download/1.png">
-              <img width="45%" src="./static/img/download/2.png">
+              <img class="contain" width="45%" src="./static/img/download/1.png">
+              <img class="contain" width="45%" src="./static/img/download/2.png">
             </v-sheet>
           </v-sheet>
         </v-sheet>

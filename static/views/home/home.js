@@ -138,7 +138,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img width="100%" src="./static/img/home/h5/banner_01.png" />
+        <img class="contain" width="100%" src="./static/img/home/h5/banner_01.png" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute px-2"
@@ -199,7 +199,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img width="100%" src="./static/img/home/h5/banner_02.png" />
+        <img class="contain" width="100%" src="./static/img/home/h5/banner_02.png" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute d-flex flex-column align-center px-2"
@@ -219,7 +219,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img width="100%" src="./static/img/home/h5/banner_03.png" />
+        <img class="contain" width="100%" src="./static/img/home/h5/banner_03.png" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute d-flex flex-column align-center"
@@ -239,7 +239,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img height="100%" width="100%" cover class="absolute" src="./static/img/home/h5/di.png" />
+        <img height="100%" width="100%" class="absolute" src="./static/img/home/h5/di.png" />
         <v-sheet
           color="transparent"
           class="mx-auto d-flex flex-column"
