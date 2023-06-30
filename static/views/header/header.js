@@ -130,7 +130,7 @@ const headerComponent = Vue.component("header-component", {
                 width="100%"
                 class="d-flex align-center"
               >
-                <v-img :src="curLang.icon" max-width="25"></v-img>
+                <v-img :src="curLang.icon" max-width="23" min-width="23"></v-img>
               </v-sheet>
             </v-btn>
           </template>
@@ -142,7 +142,7 @@ const headerComponent = Vue.component("header-component", {
                 :key="name"
               >
                 <v-list-item-icon class="mx-0">
-                  <v-img max-width="25" contain :src="icon"></v-img>
+                  <v-img max-width="23" min-width="23" contain :src="icon"></v-img>
                 </v-list-item-icon>
               </v-list-item>
             </v-list-item-group>
@@ -235,7 +235,7 @@ const headerComponent = Vue.component("header-component", {
                   :key="name"
                 >
                   <v-list-item-icon class="mr-3">
-                    <v-img min-width="24" contain :src="icon"></v-img>
+                    <v-img min-width="24" max-width="24" contain :src="icon"></v-img>
                   </v-list-item-icon>
                   <v-list-item-title class="text-16 navText--text"
                     >{{name}}</v-list-item-title
