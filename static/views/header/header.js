@@ -45,6 +45,9 @@ const headerComponent = Vue.component("header-component", {
     goHome() {
       if (this.$router.currentRoute.path != "/") this.$router.push("/");
     },
+    openPlayNow() {
+      openLink(playNowLink)
+    }
   },
   template: `
   <div class="header-component">
@@ -109,7 +112,7 @@ const headerComponent = Vue.component("header-component", {
           max-width="60px"
           class="pointer ml-auto mr-3"
         ></v-img>
-        <v-btn class="experience-btn mr-2 text-12" width="75" height="30" color="#16181e" text>
+        <v-btn @click="openPlayNow" class="experience-btn mr-2 text-12" width="75" height="30" color="#16181e" text>
           {{$t("header.play")}}
         </v-btn>
         <v-menu open-on-hover offset-y>
@@ -187,7 +190,7 @@ const headerComponent = Vue.component("header-component", {
           max-width="90px"
           class="pointer ml-auto mr-3"
         ></v-img>
-        <v-btn class="experience-btn mr-3" height="40" color="#16181e" text>
+        <v-btn @click="openPlayNow" class="experience-btn mr-3" height="40" color="#16181e" text>
           {{$t("header.play")}}
         </v-btn>
         <div>

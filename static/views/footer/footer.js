@@ -12,7 +12,7 @@ const footerComponent = Vue.component("footer-component", {
       router.push(path);
     },
     openLink() {
-      return openLink();
+      return openLink(customerServiceLink);
     },
   },
   template: `

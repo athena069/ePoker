@@ -16,7 +16,7 @@ const supportComponent = Vue.component("support-component", {
   },
   methods: {
     openLink() {
-      return openLink();
+      return openLink(customerServiceLink);
     },
     onImageLoaded() {
       // console.log('圖片載入完成');

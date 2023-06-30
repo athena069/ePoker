@@ -9,7 +9,7 @@ const bottomComponent = Vue.component("bottom-component", {
   },
   methods: {
     openLink() {
-      return openLink();
+      return openLink(customerServiceLink);
     }
   },
   template: `
