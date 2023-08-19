@@ -190,7 +190,7 @@ const zh = {
             title3: '公平公正',
             title4: '玩法多样',
             title5: '福利多多',
-            title6: '顶尖对决',
+            title6: '俱乐部朋友桌',
             title7: 'VIP系统',
             title8: '极速冲提',
             title9: '24小时客服',
