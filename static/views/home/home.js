@@ -34,42 +34,42 @@ var homeComponent = Vue.component("home-component", {
         {
           titleKey: "home.option1.title2",
           contentKey: "home.option1.content2",
-          icon: "./static/img/home/xitongtese_02.png",
+          icon: "./static/img/home/xitongtese_03.png",
         },
         {
           titleKey: "home.option1.title3",
           contentKey: "home.option1.content3",
-          icon: "./static/img/home/xitongtese_03.png",
+          icon: "./static/img/home/xitongtese_02.png",
         },
         {
           titleKey: "home.option1.title4",
           contentKey: "home.option1.content4",
-          icon: "./static/img/home/xitongtese_04.png",
+          icon: "./static/img/home/xitongtese_05.png",
         },
         {
           titleKey: "home.option1.title5",
           contentKey: "home.option1.content5",
-          icon: "./static/img/home/xitongtese_05.png",
+          icon: "./static/img/home/xitongtese_09.png",
         },
         {
           titleKey: "home.option1.title6",
           contentKey: "home.option1.content6",
-          icon: "./static/img/home/xitongtese_06.png",
+          icon: "./static/img/home/xitongtese_07.png",
         },
         {
           titleKey: "home.option1.title7",
           contentKey: "home.option1.content7",
-          icon: "./static/img/home/xitongtese_07.png",
+          icon: "./static/img/home/xitongtese_08.png",
         },
         {
           titleKey: "home.option1.title8",
           contentKey: "home.option1.content8",
-          icon: "./static/img/home/xitongtese_08.png",
+          icon: "./static/img/home/xitongtese_04.png",
         },
         {
           titleKey: "home.option1.title9",
           contentKey: "home.option1.content9",
-          icon: "./static/img/home/xitongtese_09.png",
+          icon: "./static/img/home/xitongtese_06.png",
         },
       ],
       qr: null,
@@ -155,9 +155,6 @@ var homeComponent = Vue.component("home-component", {
             <div class="titleText--text text-28 mx-2 text-center">
               {{$t("home.str1")}}
             </div>
-            <div class="titleText--text mt-1 mx-2 text-center">
-              {{$t("home.str2")}}
-            </div>
           </v-sheet>
         </v-sheet>
       </v-sheet>
@@ -209,9 +206,6 @@ var homeComponent = Vue.component("home-component", {
           <div class="text-28" style="margin-top: 5%">
             <span class="primary--text">{{$t("home.str4")}}</span>
           </div>
-          <div class="titleText--text mt-1 text-14 mx-2 text-center">
-            {{$t("home.str5")}}
-          </div>
         </v-sheet>
       </v-sheet>
       <v-sheet
@@ -229,9 +223,6 @@ var homeComponent = Vue.component("home-component", {
           <div class="text-28" style="margin-top: 5%">
             <span class="primary--text"> {{$t("home.str6")}} </span>
           </div>
-          <div class="titleText--text mt-1 text-14 mx-2 text-center">
-            {{$t("home.str7")}}
-          </div>
         </v-sheet>
       </v-sheet>
       <v-sheet
@@ -239,37 +230,13 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img height="100%" width="100%" class="absolute" src="./static/img/home/h5/di.png" />
         <v-sheet
           color="transparent"
           class="mx-auto d-flex flex-column"
           width="100%"
           height="100%"
-          style="z-index: 1"
         >
-          <img
-            width="100%"
-            :src="$t('home.imgs.src3')"
-            class="mx-auto"
-            style="margin: 3% 0"
-          />
-          <v-sheet
-            color="transparent"
-            width="100%"
-            height="80%"
-            class="d-flex flex-column align-center"
-          >
-            <div class="text-28">
-              <div class="primary--text mx-2 text-center">
-                {{$t("home.str8")}}
-              </div>
-            </div>
-            <div class="titleText--text mt-1 text-14 mx-2 text-center" style="margin-bottom: 5%">
-              {{$t("home.str9")}}
-            </div>
-            <v-img max-width="80%" src="./static/img/home/h5/taizi.png"></v-img>
-            <bottom-component></bottom-component>
-          </v-sheet>
+          <bottom-component></bottom-component>
         </v-sheet>
       </v-sheet>
     </template>
@@ -297,11 +264,8 @@ var homeComponent = Vue.component("home-component", {
             class="d-flex flex-column justify-center"
             style="padding-left: 8%"
           >
-            <div class="titleText--text text-38" style="width: 45%">
+            <div class="titleText--text text-38" style="width: 55%">
               {{$t("home.str1")}}
-            </div>
-            <div class="titleText--text mt-1" style="width: 45%">
-              {{$t("home.str2")}}
             </div>
             <v-menu open-on-hover offset-y>
               <template v-slot:activator="{ on, attrs }">
@@ -426,9 +390,6 @@ var homeComponent = Vue.component("home-component", {
             <div class="text-38">
               <span class="primary--text"> {{$t("home.str4")}} </span>
             </div>
-            <div class="titleText--text mt-1" style="width: 50%">
-              {{$t("home.str5")}}
-            </div>
           </v-sheet>
         </v-sheet>
       </v-sheet>
@@ -454,55 +415,22 @@ var homeComponent = Vue.component("home-component", {
             <div class="text-38">
               <span class="primary--text"> {{$t("home.str6")}} </span>
             </div>
-            <div
-              class="titleText--text mt-1 text-right"
-              style="width: 50%"
-            >
-              {{$t("home.str7")}}
-            </div>
           </v-sheet>
         </v-sheet>
       </v-sheet>
       <v-sheet
         color="transparent"
         width="100%"
-        class="relative d-flex justify-center"
+        class="relative d-flex justify-center my-10"
       >
-        <img width="100%" src="./static/img/home/banner_04.png" />
-        <img style="top: 25%;" class="absolute" width="40%" src="./static/img/home/banner_04_01.png" />
         <v-sheet
           color="transparent"
-          class="mx-auto absolute d-flex flex-column align-center"
+          class="mx-auto d-flex flex-column align-center"
           max-width="1140px"
           width="100%"
           height="100%"
         >
-          <v-sheet
-            color="transparent"
-            width="100%"
-            height="100%"
-            class="d-flex flex-column align-center"
-          >
-            <img
-              width="50%"
-              :src="$t('home.imgs.src3')"
-              style="margin-top: 3%"
-            />
-            <v-sheet
-              color="transparent"
-              width="100%"
-              class="d-flex flex-column"
-              style="margin-top: 3%"
-            >
-              <div class="text-36" style="width: 30%">
-                <span class="primary--text"> {{$t("home.str8")}} </span>
-              </div>
-              <div class="titleText--text mt-1" style="width: 25%">
-                {{$t("home.str9")}}
-              </div>
-            </v-sheet>
-            <bottom-component></bottom-component>
-          </v-sheet>
+          <bottom-component></bottom-component>
         </v-sheet>
       </v-sheet>
     </template>

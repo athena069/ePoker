@@ -68,7 +68,7 @@ const supportComponent = Vue.component("support-component", {
                 style="padding-bottom: 5%"
               >
                 <div class="primary--text text-14">{{$t("bottom.str3")}}</div>
-                <div class="contentText--text text-12">{{$t("bottom.str1")}}</div>
+                <div class="contentText--text text-12">Telegram</div>
               </v-sheet>
             </v-sheet>
             <v-sheet
@@ -89,8 +89,8 @@ const supportComponent = Vue.component("support-component", {
                 color="transparent"
                 style="padding-bottom: 5%"
               >
-                <div class="primary--text text-14">XXX@MAIL.COM</div>
-                <div class="contentText--text text-12">{{$t("bottom.str4")}}</div>
+                <div class="primary--text text-14">{{$t("bottom.str3")}}</div>
+                <div class="contentText--text text-12">WhatsApp</div>
               </v-sheet>
             </v-sheet>
           </v-sheet>
@@ -132,7 +132,7 @@ const supportComponent = Vue.component("support-component", {
                 style="padding-bottom: 9%"
               >
                 <div class="primary--text">{{$t("bottom.str3")}}</div>
-                <div class="contentText--text">{{$t("bottom.str1")}}</div>
+                <div class="contentText--text">Telegram</div>
               </v-sheet>
             </v-sheet>
             <v-sheet class="relative d-flex pointer" width="20%" color="transparent" style="margin-right: 4%">
@@ -147,8 +147,8 @@ const supportComponent = Vue.component("support-component", {
                 color="transparent"
                 style="padding-bottom: 9%"
               >
-                <div class="primary--text">XXX@MAIL.COM</div>
-                <div class="contentText--text">{{$t("bottom.str4")}}</div>
+                <div class="primary--text">{{$t("bottom.str3")}}</div>
+                <div class="contentText--text">WhatsApp</div>
               </v-sheet>
             </v-sheet>
           </v-sheet>

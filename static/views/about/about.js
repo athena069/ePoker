@@ -145,27 +145,6 @@ const aboutComponent = Vue.component("about-component", {
           </v-sheet>
         </v-sheet>
       </v-sheet>
-      <v-sheet width="100%" class="relative d-flex justify-center">
-        <img class="absolute" cover height="100%" width="100%" src="./static/img/about/h5/epokerhuoban-di.png">
-        <v-sheet
-          color="transparent"
-          class="d-flex flex-column align-center"
-          width="100%"
-          height="100%"
-          style="padding: 5% 10%; z-index: 1"
-        >
-          <div class="text-28">
-            <span class="titleText--text">ePOKER</span
-            ><span class="primary--text">
-              {{$t("about.str11")}}
-            </span>
-          </div>
-          <div class="titleText--text my-2 text-12">
-            {{$t("about.str12")}}
-          </div>
-          <v-img max-width="50%" min-width="250px" src="./static/img/about/h5/epokerhuoban.png"></v-img>
-        </v-sheet>
-      </v-sheet>
       <v-sheet
         color="downloadBg"
         class="d-flex align-center flex-column"
@@ -330,30 +309,6 @@ const aboutComponent = Vue.component("about-component", {
                 <div class="contentText--text">{{$t("about.str10")}}</div>
               </v-sheet>
             </v-sheet>
-          </v-sheet>
-        </v-sheet>
-      </v-sheet>
-      <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/banner_04.png">
-        <v-sheet
-          color="transparent"
-          class="absolute d-flex flex-column justify-center"
-          max-width="1140px"
-          width="100%"
-          height="100%"
-        >
-          <div class="text-38">
-            <span class="titleText--text">ePOKER</span
-            ><span class="primary--text">
-              {{$t("about.str11")}}
-            </span>
-          </div>
-          <v-sheet
-            color="transparent"
-            width="40%"
-            class="titleText--text mt-2"
-          >
-            {{$t("about.str12")}}
           </v-sheet>
         </v-sheet>
       </v-sheet>

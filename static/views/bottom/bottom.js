@@ -32,13 +32,13 @@ const bottomComponent = Vue.component("bottom-component", {
       <v-img
         class="mx-auto"
         max-width="50px"
-        src="./static/img/home/icon_kefu.png"
+        src="./static/img/home/icon_tg.png"
       ></v-img>
       <div class="primary--text mt-3">
         {{$t("bottom.str3")}}
       </div>
       <div class="contentText--text mt-2 text-14">
-        {{$t("bottom.str1")}}
+        Telegram
       </div>
     </div>
     <v-img
@@ -52,11 +52,11 @@ const bottomComponent = Vue.component("bottom-component", {
       <v-img
         class="mx-auto"
         max-width="50px"
-        src="./static/img/home/icon_mail.png"
+        src="./static/img/home/icon_whatsApp.png"
       ></v-img>
-      <div class="primary--text mt-3" style="margin-left: -20px;">XXX@MAIL.COM</div>
+      <div class="primary--text mt-3"">{{$t("bottom.str3")}}</div>
       <div class="contentText--text mt-2 text-14">
-        {{$t("bottom.str4")}}
+        WhatsApp
       </div>
     </div>
     </div>
@@ -77,10 +77,10 @@ const bottomComponent = Vue.component("bottom-component", {
       <v-img
         class="mx-auto"
         max-width="70px"
-        src="./static/img/home/icon_kefu.png"
+        src="./static/img/home/icon_tg.png"
       ></v-img>
       <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
-      <div class="contentText--text">{{$t("bottom.str1")}}</div>
+      <div class="contentText--text">Telegram</div>
     </div>
     <v-img
       style="margin: 0 8%"
@@ -93,10 +93,10 @@ const bottomComponent = Vue.component("bottom-component", {
       <v-img
         class="mx-auto"
         max-width="70px"
-        src="./static/img/home/icon_mail.png"
+        src="./static/img/home/icon_whatsApp.png"
       ></v-img>
-      <div class="primary--text mt-3">XXX@MAIL.COM</div>
-      <div class="contentText--text">{{$t("bottom.str4")}}</div>
+      <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
+      <div class="contentText--text">WhatsApp</div>
     </div>
   </v-sheet>
   `,
