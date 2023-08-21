@@ -220,7 +220,7 @@ var homeComponent = Vue.component("home-component", {
           width="100%"
           height="100%"
         >
-          <div class="text-28" style="margin-top: 5%">
+          <div class="text-28 text-center" style="margin-top: 5%">
             <span class="primary--text"> {{$t("home.str6")}} </span>
           </div>
         </v-sheet>

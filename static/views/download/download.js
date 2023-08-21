@@ -46,7 +46,6 @@ const downloadComponent = Vue.component("download-component", {
             class="d-flex flex-column align-center flex-1"
           >
             <div class="text-28" style="margin-top: 15%">
-              <span class="titleText--text">ePOKER</span>
               <span class="primary--text">
                 {{$t("download.str1")}}
               </span>
@@ -84,7 +83,7 @@ const downloadComponent = Vue.component("download-component", {
             class="d-flex flex-column align-center flex-1"
           >
             <div class="text-38" style="margin-top: 10%">
-              <span class="titleText--text">ePOKER</span>
+              <span class="titleText--text">{{$t("epoker")}}</span>
               <span class="primary--text">
                 {{$t("download.str1")}}
               </span>

@@ -27,8 +27,10 @@ const footerComponent = Vue.component("footer-component", {
         contain
         src="static/img/header/logo.png"
       ></v-img>
-      <div class="titleText--text pointer text mt-8" @click="goPath('/about')">{{$t("footer.str5")}}</div>
-      <div class="titleText--text pointer text mt-4" @click="goPath('/use')">{{$t("footer.str6")}}</div>
+      <div class="d-flex mt-8">
+        <div class="titleText--text pointer text mr-4" @click="goPath('/about')">{{$t("footer.str5")}}</div>
+        <div class="titleText--text pointer text" @click="goPath('/use')">{{$t("footer.str6")}}</div>
+      </div>
       <div class="contentText--text mt-8">
         {{$t("footer.str7")}}
       </div>

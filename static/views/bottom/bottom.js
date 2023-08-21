@@ -28,37 +28,43 @@ const bottomComponent = Vue.component("bottom-component", {
       </div>
     </div>
     <div class="d-flex justify-center">
-    <div class="text-center pointer" @click="openLink">
-      <v-img
-        class="mx-auto"
-        max-width="50px"
-        src="./static/img/home/icon_tg.png"
-      ></v-img>
-      <div class="primary--text mt-3">
-        {{$t("bottom.str3")}}
+      <div class="text-center pointer mx-7" @click="openLink">
+        <v-img
+          class="mx-auto"
+          max-width="50px"
+          src="./static/img/home/icon_tg.png"
+        ></v-img>
+        <div class="primary--text mt-3">
+          {{$t("bottom.str3")}}
+        </div>
+        <div class="contentText--text mt-2 text-14">
+          Telegram
+        </div>
       </div>
-      <div class="contentText--text mt-2 text-14">
-        Telegram
+      <div class="text-center pointer mx-7" style="width: 70px">
+        <v-img
+          class="mx-auto"
+          max-width="50px"
+          src="./static/img/home/icon_whatsApp.png"
+        ></v-img>
+        <div class="primary--text mt-3"">{{$t("bottom.str3")}}</div>
+        <div class="contentText--text mt-2 text-14">
+          WhatsApp
+        </div>
       </div>
-    </div>
-    <v-img
-      style="margin: 0 15%;"
-      contain
-      max-height="80px"
-      max-width="1px"
-      src="./static/img/home/fengexian.png"
-    ></v-img>
-    <div class="text-center pointer" style="width: 70px">
-      <v-img
-        class="mx-auto"
-        max-width="50px"
-        src="./static/img/home/icon_whatsApp.png"
-      ></v-img>
-      <div class="primary--text mt-3"">{{$t("bottom.str3")}}</div>
-      <div class="contentText--text mt-2 text-14">
-        WhatsApp
+      <div class="text-center pointer mx-7" style="width: 70px">
+        <div class="d-flex align-center mx-auto" style="height: 50px; width: 50px">
+          <v-img
+            class="mx-auto"
+            max-width="100%"
+            src="./static/img/home/icon_mail.png"
+          ></v-img>
+        </div>
+        <div class="primary--text mt-3 ml-n6"">XXX@MAIL.COM</div>
+        <div class="contentText--text mt-2 text-14">
+          {{$t("bottom.str4")}}
+        </div>
       </div>
-    </div>
     </div>
   </v-sheet>
   <v-sheet
@@ -73,30 +79,36 @@ const bottomComponent = Vue.component("bottom-component", {
       </div>
       <div class="contentText--text mt-1">{{$t("bottom.str2")}}</div>
     </div>
-    <div class="text-center ml-auto pointer" @click="openLink">
-      <v-img
-        class="mx-auto"
-        max-width="70px"
-        src="./static/img/home/icon_tg.png"
-      ></v-img>
-      <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
-      <div class="contentText--text">Telegram</div>
-    </div>
-    <v-img
-      style="margin: 0 8%"
-      contain
-      max-height="90px"
-      max-width="1px"
-      src="./static/img/home/fengexian.png"
-    ></v-img>
-    <div class="text-center pointer">
-      <v-img
-        class="mx-auto"
-        max-width="70px"
-        src="./static/img/home/icon_whatsApp.png"
-      ></v-img>
-      <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
-      <div class="contentText--text">WhatsApp</div>
+    <div class="ml-auto d-flex justify-space-around" style="width: 50%">
+      <div class="text-center pointer" @click="openLink">
+        <v-img
+          class="mx-auto"
+          max-width="70px"
+          src="./static/img/home/icon_tg.png"
+        ></v-img>
+        <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
+        <div class="contentText--text">Telegram</div>
+      </div>
+      <div class="text-center pointer">
+        <v-img
+          class="mx-auto"
+          max-width="70px"
+          src="./static/img/home/icon_whatsApp.png"
+        ></v-img>
+        <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
+        <div class="contentText--text">WhatsApp</div>
+      </div>
+      <div class="text-center pointer">
+        <div class="d-flex align-center mx-auto" style="height: 70px; width: 70px">
+          <v-img
+            class="mx-auto"
+            max-width="100%"
+            src="./static/img/home/icon_mail.png"
+          ></v-img>
+        </div>
+        <div class="primary--text mt-3">XXX@MAIL.COM</div>
+        <div class="contentText--text">{{$t("bottom.str4")}}</div>
+      </div>
     </div>
   </v-sheet>
   `,
