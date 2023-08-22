@@ -46,7 +46,7 @@ const headerComponent = Vue.component("header-component", {
       if (this.$router.currentRoute.path != "/") this.$router.push("/");
     },
     openPlayNow() {
-      openLink(playNowLink + `&${new Date().getTime()}`)
+      openLink(playNowLink)
     }
   },
   template: `
