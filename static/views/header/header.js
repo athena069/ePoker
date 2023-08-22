@@ -13,12 +13,15 @@ const headerComponent = Vue.component("header-component", {
       ],
       selectedItem: 0,
       drawer: false,
+      title: null,
     };
   },
   mounted() {
     this.selectedItem = this.langOptions.findIndex(
       (item) => item.key === this.$i18n.locale
     );
+    this.title = Document.querySelector("title");
+    this.title.textContent = this.$t("epoker");
   },
   computed: {
     curLang() {
@@ -41,13 +44,14 @@ const headerComponent = Vue.component("header-component", {
       const key = this.langOptions[val].key;
       localStorage.setItem("language", key);
       this.$i18n.locale = key; //这个代码负责实时切换语言
+      this.title.textContent = this.$t("epoker");
     },
     goHome() {
       if (this.$router.currentRoute.path != "/") this.$router.push("/");
     },
     openPlayNow() {
-      openLink(playNowLink)
-    }
+      openLink(playNowLink);
+    },
   },
   template: `
   <div class="header-component">

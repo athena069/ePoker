@@ -8,6 +8,7 @@
     />
     <link href="./libs/vuetify.min.css" rel="stylesheet" />
     <link href="./static/main.css" rel="stylesheet" />
+    <link href="./static/img/favicon.ico" rel="shortcut icon"/>
 
     <script src="./libs/vue.min.js"></script>
     <script src="./libs/vue-i18n.js"></script>
@@ -19,6 +20,7 @@
     <script src="./static/lang/zh.js"></script>
 
     <script>
+      var Document = document;
       const vuetify = new Vuetify({
         theme: {
           themes: {
@@ -60,7 +62,6 @@
           qrImg = qr._oDrawing._elImage;
         }
       }
-
       generateQRImg();
     </script>
 
