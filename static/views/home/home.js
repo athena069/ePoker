@@ -138,7 +138,7 @@ var homeComponent = Vue.component("home-component", {
         width="100%"
         class="relative d-flex justify-center"
       >
-        <img class="contain" width="100%" src="./static/img/home/h5/banner_01.png" />
+        <img class="contain" width="100%" src="./static/img/home/h5/banner_01.png" style="margin-top: -15%" />
         <v-sheet
           color="transparent"
           class="mx-auto absolute px-2"
@@ -150,7 +150,7 @@ var homeComponent = Vue.component("home-component", {
             width="100%"
             height="40%"
             class="d-flex flex-column align-center"
-            style="padding-top: 10%"
+            style="padding-top: 5%"
           >
             <div class="titleText--text text-28 mx-2 text-center">
               {{$t("home.str1")}}

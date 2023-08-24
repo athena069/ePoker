@@ -172,7 +172,7 @@ const en = {
     play: "Play Now",
   },
   home: {
-    str1: "The Poker Platform Players Love and Trust Most",
+    str1: "The Most Popular and Trusted Poker Platform",
     str2: "Offering thousands of tournaments and the largest foundation of players for cash games",
     str3: "Mobile App",
     menu: {
