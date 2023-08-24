@@ -84,7 +84,9 @@ new Vue({
         {
           icon: "./static/img/home/icon_qlb.png",
           i18nKey: "home.menu.str3",
-          event: this.test1,
+          event: () => {
+            // openLink(apk);
+          },
           bgColor: "#867cb9",
           textColor: "#33286f",
           key: "key1",
@@ -93,7 +95,9 @@ new Vue({
         {
           icon: "./static/img/home/icon_ptxz.png",
           i18nKey: "home.menu.str2",
-          event: this.test2,
+          event: () => {
+            // openLink(apk);
+          },
           bgColor: "#c9a17e",
           textColor: "#563518",
           key: "key2",
@@ -102,7 +106,9 @@ new Vue({
         {
           icon: "./static/img/home/icon_az1.png",
           i18nKey: "home.menu.str1",
-          event: this.test3,
+          event: () => {
+            openLink(apk);
+          },
           bgColor: "#74b654",
           textColor: "#295514",
           key: "key3",
@@ -121,15 +127,6 @@ new Vue({
     },
   },
   methods: {
-    test1() {
-      console.log("test1");
-    },
-    test2() {
-      console.log("test2");
-    },
-    test3() {
-      console.log("test3");
-    },
     shiwDownloadDialog() {
       this.downloadDialog = true;
       this.qr = qrImg;

@@ -23,6 +23,9 @@ const downloadComponent = Vue.component("download-component", {
       // console.log('圖片載入完成');
       this.isHidden = false;
     },
+    openLink1() {
+      openLink(apk);
+    }
   },
   template: `
   <v-sheet color="downloadBg" class="download-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
@@ -52,8 +55,8 @@ const downloadComponent = Vue.component("download-component", {
             </div>
             <div class="titleText--text text-12">{{$t("download.str2")}}</div>
             <v-sheet color="transparent" width="100%" class="d-flex justify-center" style="margin-top: 10%;">
-              <img class="contain" width="45%" src="./static/img/download/1.png">
-              <img class="contain" width="45%" src="./static/img/download/2.png">
+              <img class="contain pointer" width="45%" @click="openLink1" src="./static/img/download/1.png">
+              <img class="contain pointer" width="45%" src="./static/img/download/2.png">
             </v-sheet>
           </v-sheet>
         </v-sheet>
@@ -91,8 +94,8 @@ const downloadComponent = Vue.component("download-component", {
               {{$t("download.str2")}}
             </div>
             <v-sheet color="transparent" width="100%" class="d-flex justify-center" style="margin-top: 3%;">
-              <img width="18%" src="./static/img/download/1.png">
-              <img width="18%" src="./static/img/download/2.png">
+              <img class="pointer" width="18%" @click="openLink1" src="./static/img/download/1.png">
+              <img class="pointer" width="18%" src="./static/img/download/2.png">
             </v-sheet>
             <v-sheet color="transparent" class="d-flex relative" width="50%">
               <img width="100%" src="./static/img/download/3.png">

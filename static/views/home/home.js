@@ -7,7 +7,9 @@ var homeComponent = Vue.component("home-component", {
         {
           i18nKey: "home.menu.str1",
           icon: "./static/img/home/icon_az.png",
-          event: () => {},
+          event: () => {
+            openLink(apk);
+          },
         },
         {
           i18nKey: "home.menu.str2",
@@ -93,6 +95,9 @@ var homeComponent = Vue.component("home-component", {
     onImageLoaded() {
       // console.log('圖片載入完成');
       this.isHidden = false;
+    },
+    openLink(url) {
+      openLink(url);
     },
   },
   template: `
