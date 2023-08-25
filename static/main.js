@@ -130,7 +130,7 @@ new Vue({
     },
   },
   methods: {
-    shiwDownloadDialog() {
+    showDownloadDialog() {
       this.downloadDialog = true;
       this.qr = qrImg;
     },
