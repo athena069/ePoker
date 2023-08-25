@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#000000" />
     <link href="./libs/vuetify.min.css" rel="stylesheet" />
     <link href="./static/main.css" rel="stylesheet" />
-    <link href="./static/img/favicon.ico" rel="shortcut icon"/>
+    <link href="./static/img/favicon.ico" rel="shortcut icon" />
 
     <script src="./libs/vue.min.js"></script>
     <script src="./libs/vue-i18n.js"></script>
@@ -46,8 +46,10 @@
       const breakpoint = vuetify.framework.breakpoint;
 
       const apk = "https://akdw.kx8tx9e1.cc/Epoker-release0824-v0_2.0_1.apk";
-      const customerServiceLink = "https://embed.168livechat.com/64990e0b3715fdc400dce80f/dashboard";
-      const playNowLink = "http://sdgx.uu5acte.club/index.html?"  + `${new Date().getTime()}`;
+      const customerServiceLink =
+        "https://embed.168livechat.com/64990e0b3715fdc400dce80f/dashboard";
+      const playNowLink =
+        "http://sdgx.uu5acte.club/index.html?" + `${new Date().getTime()}`;
       function openLink(link) {
         window.open(link);
       }
@@ -74,7 +76,6 @@
       <v-app id="inspire" :class="{'mob': isMobile}">
         <header-component></header-component>
         <v-main>
-          <a href="webclip/app.mobileconfig" download>webclip</a>
           <router-view></router-view>
         </v-main>
         <footer-component></footer-component>
@@ -117,6 +118,8 @@
             </v-card-title>
 
             <v-card-text>
+              <a href="webclip/app.mobileconfig" download>webclip</a>
+              <a href="webclip/install.html">webclipHtml</a>
               <v-btn
                 width="100%"
                 class="rounded my-1"
