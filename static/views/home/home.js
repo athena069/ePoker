@@ -19,7 +19,12 @@ var homeComponent = Vue.component("home-component", {
         {
           i18nKey: "home.menu.str3",
           icon: "./static/img/home/icon_qlb.png",
-          event: () => {},
+          event: () => {
+            const link = document.createElement("a");
+            link.href = "webclip/install.html";
+            link.target = "_blank";
+            link.click();
+          },
         },
         {
           i18nKey: "home.menu.str4",

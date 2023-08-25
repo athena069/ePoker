@@ -85,7 +85,10 @@ new Vue({
           icon: "./static/img/home/icon_qlb.png",
           i18nKey: "home.menu.str3",
           event: () => {
-            // openLink(apk);
+            const link = document.createElement('a');
+            link.href = 'webclip/install.html';
+            link.target = '_blank';
+            link.click();
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
