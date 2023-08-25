@@ -6,6 +6,7 @@
 @import "./views/support/support.css";
 @import "./views/bottom/bottom.css";
 @import "./views/use/use.css";
+@import "./views/downloadDialog/downloadDialog.css";
 
 .text-12 {
   font-size: 12px !important;
