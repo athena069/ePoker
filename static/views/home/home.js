@@ -41,42 +41,42 @@ var homeComponent = Vue.component("home-component", {
         {
           titleKey: "home.option1.title2",
           contentKey: "home.option1.content2",
-          icon: "./static/img/home/xitongtese_03.png",
+          icon: "./static/img/home/xitongtese_02.png",
         },
         {
           titleKey: "home.option1.title3",
           contentKey: "home.option1.content3",
-          icon: "./static/img/home/xitongtese_02.png",
+          icon: "./static/img/home/xitongtese_03.png",
         },
         {
           titleKey: "home.option1.title4",
           contentKey: "home.option1.content4",
-          icon: "./static/img/home/xitongtese_05.png",
+          icon: "./static/img/home/xitongtese_04.png",
         },
         {
           titleKey: "home.option1.title5",
           contentKey: "home.option1.content5",
-          icon: "./static/img/home/xitongtese_09.png",
+          icon: "./static/img/home/xitongtese_05.png",
         },
         {
           titleKey: "home.option1.title6",
           contentKey: "home.option1.content6",
-          icon: "./static/img/home/xitongtese_07.png",
+          icon: "./static/img/home/xitongtese_06.png",
         },
         {
           titleKey: "home.option1.title7",
           contentKey: "home.option1.content7",
-          icon: "./static/img/home/xitongtese_08.png",
+          icon: "./static/img/home/xitongtese_07.png",
         },
         {
           titleKey: "home.option1.title8",
           contentKey: "home.option1.content8",
-          icon: "./static/img/home/xitongtese_04.png",
+          icon: "./static/img/home/xitongtese_08.png",
         },
         {
           titleKey: "home.option1.title9",
           contentKey: "home.option1.content9",
-          icon: "./static/img/home/xitongtese_06.png",
+          icon: "./static/img/home/xitongtese_09.png",
         },
       ],
       qr: null,
@@ -189,7 +189,7 @@ var homeComponent = Vue.component("home-component", {
               height="100%"
               class="d-flex align-center rounded-lg pa-4"
             >
-              <img width="70" contain :src="icon" />
+              <img class="mr-2 ml-n3" width="70" contain :src="icon"/>
               <v-sheet color="transparent" height="100%">
                 <div class="titleText--text text-14">{{$t(titleKey)}}</div>
                 <div class="mt-1 contentText--text text-12 text-left">
@@ -349,7 +349,7 @@ var homeComponent = Vue.component("home-component", {
                     outlined
                     tile
                     height="100%"
-                    style="padding-left: 5%"
+                    style="padding-left: 2%"
                   >
                     <v-img max-width="18%" contain :src="icon"></v-img>
                     <v-sheet

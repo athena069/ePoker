@@ -10,7 +10,7 @@ const bottomComponent = Vue.component("bottom-component", {
   methods: {
     openLink() {
       return openLink(customerServiceLink);
-    }
+    },
   },
   template: `
   <v-sheet
@@ -30,8 +30,9 @@ const bottomComponent = Vue.component("bottom-component", {
     <div class="d-flex justify-center">
       <div class="text-center pointer mx-7" @click="openLink">
         <v-img
-          class="mx-auto"
-          max-width="50px"
+          class="ml-4"
+          max-width="65px"
+          width="65px"
           src="./static/img/home/icon_tg.png"
         ></v-img>
         <div class="primary--text mt-3">
@@ -41,10 +42,11 @@ const bottomComponent = Vue.component("bottom-component", {
           Telegram
         </div>
       </div>
-      <div class="text-center pointer mx-7" style="width: 70px">
+      <div class="text-center pointer mx-7">
         <v-img
-          class="mx-auto"
-          max-width="50px"
+          class="ml-4"
+          max-width="65px"
+          width="65px"
           src="./static/img/home/icon_whatsApp.png"
         ></v-img>
         <div class="primary--text mt-3"">{{$t("bottom.str3")}}</div>
@@ -53,13 +55,12 @@ const bottomComponent = Vue.component("bottom-component", {
         </div>
       </div>
       <div class="text-center pointer mx-7" style="width: 70px">
-        <div class="d-flex align-center mx-auto" style="height: 50px; width: 50px">
-          <v-img
-            class="mx-auto"
-            max-width="100%"
-            src="./static/img/home/icon_mail.png"
-          ></v-img>
-        </div>
+        <v-img
+          class="ml-3"
+          max-width="65px"
+          width="65px"
+          src="./static/img/home/icon_mail.png"
+        ></v-img>
         <div class="primary--text mt-3 ml-n6"">XXX@MAIL.COM</div>
         <div class="contentText--text mt-2 text-14">
           {{$t("bottom.str4")}}
@@ -82,8 +83,8 @@ const bottomComponent = Vue.component("bottom-component", {
     <div class="ml-auto d-flex justify-space-around" style="width: 50%">
       <div class="text-center pointer" @click="openLink">
         <v-img
-          class="mx-auto"
-          max-width="70px"
+          class="ml-5"
+          max-width="74px"
           src="./static/img/home/icon_tg.png"
         ></v-img>
         <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
@@ -91,17 +92,17 @@ const bottomComponent = Vue.component("bottom-component", {
       </div>
       <div class="text-center pointer">
         <v-img
-          class="mx-auto"
-          max-width="70px"
+          class="ml-5"
+          max-width="74px"
           src="./static/img/home/icon_whatsApp.png"
         ></v-img>
         <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
         <div class="contentText--text">WhatsApp</div>
       </div>
       <div class="text-center pointer">
-        <div class="d-flex align-center mx-auto" style="height: 70px; width: 70px">
+        <div class="d-flex align-center mx-auto" style="height: 74px; width: 74px">
           <v-img
-            class="mx-auto"
+            class="ml-2"
             max-width="100%"
             src="./static/img/home/icon_mail.png"
           ></v-img>

@@ -169,7 +169,7 @@ a {
   transition: opacity 0.3s;
   font-size: 18px;
   background-image: url("./img/download/di.png");
-  background-size: cover;
+  background-size: 100%;
   z-index: 2;
 }
 .mob .download-btn {
