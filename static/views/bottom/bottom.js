@@ -88,7 +88,7 @@ const bottomComponent = Vue.component("bottom-component", {
           src="./static/img/home/icon_tg.png"
         ></v-img>
         <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
-        <div class="contentText--text">Telegram</div>
+        <div class="contentText--text mt-1">Telegram</div>
       </div>
       <div class="text-center pointer">
         <v-img
@@ -97,10 +97,10 @@ const bottomComponent = Vue.component("bottom-component", {
           src="./static/img/home/icon_whatsApp.png"
         ></v-img>
         <div class="primary--text mt-3">{{$t("bottom.str3")}}</div>
-        <div class="contentText--text">WhatsApp</div>
+        <div class="contentText--text mt-1">WhatsApp</div>
       </div>
       <div class="text-center pointer">
-        <div class="d-flex align-center mx-auto" style="height: 74px; width: 74px">
+        <div class="d-flex align-center mx-auto" style="height: 60px; width: 74px">
           <v-img
             class="ml-2"
             max-width="100%"
@@ -108,7 +108,7 @@ const bottomComponent = Vue.component("bottom-component", {
           ></v-img>
         </div>
         <div class="primary--text mt-3">XXX@MAIL.COM</div>
-        <div class="contentText--text">{{$t("bottom.str4")}}</div>
+        <div class="contentText--text mt-1">{{$t("bottom.str4")}}</div>
       </div>
     </div>
   </v-sheet>
