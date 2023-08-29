@@ -27,41 +27,41 @@ const bottomComponent = Vue.component("bottom-component", {
         {{$t("bottom.str2")}}
       </div>
     </div>
-    <div class="d-flex justify-center">
-      <div class="text-center pointer mx-7" @click="openLink">
+    <div class="d-flex justify-space-around mx-auto" style="width: 100%; max-width: 450px;">
+      <div class="text-center pointer" @click="openLink">
         <v-img
           class="ml-4"
           max-width="65px"
           width="65px"
           src="./static/img/home/icon_tg.png"
         ></v-img>
-        <div class="primary--text mt-3">
+        <div class="primary--text mt-3 text-14">
           {{$t("bottom.str3")}}
         </div>
         <div class="contentText--text mt-2 text-14">
           Telegram
         </div>
       </div>
-      <div class="text-center pointer mx-7">
+      <div class="text-center pointer">
         <v-img
           class="ml-4"
           max-width="65px"
           width="65px"
           src="./static/img/home/icon_whatsApp.png"
         ></v-img>
-        <div class="primary--text mt-3"">{{$t("bottom.str3")}}</div>
+        <div class="primary--text mt-3 text-14">{{$t("bottom.str3")}}</div>
         <div class="contentText--text mt-2 text-14">
           WhatsApp
         </div>
       </div>
-      <div class="text-center pointer mx-7" style="width: 70px">
+      <div class="d-flex flex-column align-center pointer" style="width: 70px">
         <v-img
           class="ml-3"
           max-width="65px"
           width="65px"
           src="./static/img/home/icon_mail.png"
         ></v-img>
-        <div class="primary--text mt-3 ml-n6"">XXX@MAIL.COM</div>
+        <div class="primary--text mt-3 text-14">XXX@MAIL.COM</div>
         <div class="contentText--text mt-2 text-14">
           {{$t("bottom.str4")}}
         </div>
