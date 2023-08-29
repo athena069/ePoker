@@ -62,7 +62,7 @@ const bottomComponent = Vue.component("bottom-component", {
           src="./static/img/home/icon_mail.png"
         ></v-img>
         <div class="primary--text mt-3 text-14">XXX@MAIL.COM</div>
-        <div class="contentText--text mt-2 text-14">
+        <div class="contentText--text mt-2 text-14 text-center">
           {{$t("bottom.str4")}}
         </div>
       </div>
