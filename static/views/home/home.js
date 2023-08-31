@@ -189,8 +189,8 @@ var homeComponent = Vue.component("home-component", {
               height="100%"
               class="d-flex align-center rounded-lg pa-4"
             >
-              <img class="mr-2 ml-n3" width="70" contain :src="icon"/>
-              <v-sheet color="transparent" height="100%">
+              <img class="" width="70" contain :src="icon"/>
+              <v-sheet color="transparent" class="d-flex flex-column justify-center" height="100%">
                 <div class="titleText--text text-14">{{$t(titleKey)}}</div>
                 <div class="mt-1 contentText--text text-12 text-left">
                   {{$t(contentKey)}}
@@ -349,9 +349,9 @@ var homeComponent = Vue.component("home-component", {
                     outlined
                     tile
                     height="100%"
-                    style="padding-left: 2%"
+                    style="padding-left: 4%"
                   >
-                    <v-img max-width="18%" contain :src="icon"></v-img>
+                    <v-img max-width="23%" contain :src="icon"></v-img>
                     <v-sheet
                       color="transparent"
                       height="100%"
