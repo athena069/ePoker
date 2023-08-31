@@ -280,5 +280,8 @@ const en = {
     content:
       "Scan the QR Code, you will be redirected to the application download page.",
   },
-  epoker: "Epoker"
+  epoker: "Epoker",
+  tg: "Telegram",
+  whats_app: "WhatsApp",
+  mail: "XXX@MAIL.COM",
 };
