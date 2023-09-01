@@ -252,6 +252,7 @@ const en = {
     imgs: {
       src1: "./static/img/about/en/biaoti.png",
     },
+    str17: "1.2 Million",
   },
   support: {
     str1: "",

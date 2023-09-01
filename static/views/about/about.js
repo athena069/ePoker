@@ -271,7 +271,7 @@ const aboutComponent = Vue.component("about-component", {
                 color="#22272d"
                 class="d-flex flex-column align-center justify-center rounded"
               >
-                <div class="primary--text text-38">120萬</div>
+                <div class="primary--text text-38">{{$t("about.str17")}}</div>
                 <div class="contentText--text">
                   {{$t("about.str8")}}
                 </div>
