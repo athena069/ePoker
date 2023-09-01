@@ -56,6 +56,7 @@ const bottomComponent = Vue.component("bottom-component", {
           height="50px"
           contain
           :src="icon"
+          class="ml-3"
         ></v-img>
         <span class="primary--text mt-3 text-14 text-center">
           {{$t(titleKey)}}
@@ -82,9 +83,10 @@ const bottomComponent = Vue.component("bottom-component", {
       <div class="text-center pointer flex-1 dev-box" v-for="({ titleKey, contentKey, icon, event, width }, index) of options" @click="event" :key="index">
         <div class="d-flex align-center justify-center mx-auto" style="height: 60px">
           <v-img
-            :max-width="index == 2 ? 75: 60"
+            max-width="80"
             contaion
             :src="icon"
+            class="ml-4"
           ></v-img>
         </div>
         <div class="primary--text mt-3">{{$t(titleKey)}}</div>
