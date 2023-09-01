@@ -189,7 +189,7 @@ var homeComponent = Vue.component("home-component", {
               height="100%"
               class="d-flex align-center rounded-lg pa-4"
             >
-              <img class="" width="70" contain :src="icon"/>
+              <img class="ml-n2 mr-2" width="70" contain :src="icon"/>
               <v-sheet color="transparent" class="d-flex flex-column justify-center" height="100%">
                 <div class="titleText--text text-14">{{$t(titleKey)}}</div>
                 <div class="mt-1 contentText--text text-12 text-left">
@@ -344,14 +344,13 @@ var homeComponent = Vue.component("home-component", {
                   :key="index"
                 >
                   <v-sheet
-                    class="card-bg rounded-lg d-flex"
+                    class="card-bg rounded-lg d-flex px-2"
                     color="transparent"
                     outlined
                     tile
                     height="100%"
-                    style="padding-left: 4%"
                   >
-                    <v-img max-width="23%" contain :src="icon"></v-img>
+                    <v-img class="mr-1" max-width="23%" contain :src="icon"></v-img>
                     <v-sheet
                       color="transparent"
                       height="100%"
