@@ -8,20 +8,24 @@ const supportComponent = Vue.component("support-component", {
           contentKey: "tg",
           icon: "./static/img/support/1.png",
           event: () => {
-            openLink(customerServiceLink);
+            openLink(tgLink);
           },
         },
         {
           titleKey: "bottom.str3",
           contentKey: "whats_app",
           icon: "./static/img/support/2.png",
-          event: () => {},
+          event: () => {
+            openLink(whatsappLink);
+          },
         },
         {
           titleKey: "mail",
           contentKey: "bottom.str4",
           icon: "./static/img/support/3.png",
-          event: () => {},
+          event: () => {
+            openLink(customerServiceLink);
+          },
         },
       ],
     };

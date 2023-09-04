@@ -7,20 +7,24 @@ const bottomComponent = Vue.component("bottom-component", {
           contentKey: "tg",
           icon: "./static/img/home/icon_tg.png",
           event: () => {
-            openLink(customerServiceLink);
+            openLink(tgLink);
           },
         },
         {
           titleKey: "bottom.str3",
           contentKey: "whats_app",
           icon: "./static/img/home/icon_whatsApp.png",
-          event: () => {},
+          event: () => {
+            openLink(whatsappLink);
+          },
         },
         {
           titleKey: "mail",
           contentKey: "bottom.str4",
           icon: "./static/img/home/icon_mail.png",
-          event: () => {},
+          event: () => {
+            openLink(customerServiceLink);
+          },
         },
       ],
     };
