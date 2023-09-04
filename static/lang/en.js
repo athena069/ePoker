@@ -261,7 +261,7 @@ const en = {
   },
   bottom: {
     str1: "Online Chat",
-    str2: "There’s a reason why poker is the most popular card game in the world",
+    str2: "Exploring the Mystery of Poker's Global Popularity",
     str3: "Send",
     str4: "Customer Service",
   },
