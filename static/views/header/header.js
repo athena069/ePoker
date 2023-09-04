@@ -6,7 +6,7 @@ const headerComponent = Vue.component("header-component", {
       langOptions: [
         {
           key: "zh",
-          name: "簡體中文",
+          name: "简体中文",
           icon: "./static/img/header/icon_cn.png",
         },
         { key: "en", name: "English", icon: "./static/img/header/icon_en.png" },

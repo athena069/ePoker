@@ -192,7 +192,7 @@ const zh = {
       str1: "安卓版",
       str2: "普通下载",
       str3: "轻量版",
-      str4: "扫瞄二维码",
+      str4: "扫描二维码",
     },
     option1: {
       title1: "玩家众多全球流行",
@@ -276,7 +276,7 @@ const zh = {
     str4: "关于E扑克",
     str5: "关于我们",
     str6: "使用条款",
-    str7: "版權所有@2023 E扑克 版權所有",
+    str7: "版权所有@2023 E扑克 版权所有",
   },
   download_btn: "点击下载 APP",
   download_dialog_title: "./static/img/dialog/biaoti_xz.png",
