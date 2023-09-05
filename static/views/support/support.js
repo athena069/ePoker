@@ -20,7 +20,7 @@ const supportComponent = Vue.component("support-component", {
           },
         },
         {
-          titleKey: "mail",
+          titleKey: "bottom.str3",
           contentKey: "bottom.str4",
           icon: "./static/img/support/3.png",
           event: () => {

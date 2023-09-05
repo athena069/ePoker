@@ -263,7 +263,7 @@ const en = {
     str1: "Online Chat",
     str2: "Exploring the Mystery of Poker's Global Popularity",
     str3: "Send",
-    str4: "Customer Service",
+    str4: "Online Chat",
   },
   footer: {
     str1: "Download",

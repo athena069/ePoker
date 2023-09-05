@@ -19,7 +19,7 @@ const bottomComponent = Vue.component("bottom-component", {
           },
         },
         {
-          titleKey: "mail",
+          titleKey: "bottom.str3",
           contentKey: "bottom.str4",
           icon: "./static/img/home/icon_mail.png",
           event: () => {
