@@ -206,7 +206,7 @@ const en = {
       content7:
         "The higher your membership level, the greater your benefits and exclusive privileges.",
       content8:
-        "Quick deposits and withdrawals, your money stays safe, includes a built-in USTD wallet.",
+        "Quick deposits and withdrawals, your money stays safe, includes a built-in USDT wallet.",
       content9:
         "Customer support available around the clock to assist with any inquiries.",
     },
