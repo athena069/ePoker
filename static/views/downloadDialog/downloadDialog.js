@@ -25,6 +25,18 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
     btnOptions() {
       return [
         {
+          icon: "./static/img/home/icon_ptxz.png",
+          i18nKey: "home.menu.str2",
+          event: () => {
+            // openLink(apk);
+          },
+          bgColor: "#c9a17e",
+          textColor: "#563518",
+          key: "key2",
+          isShow:
+            this.operatingSystem == "unknown" || this.operatingSystem == "iOS",
+        },
+        {
           icon: "./static/img/home/icon_qlb.png",
           i18nKey: "home.menu.str3",
           event: () => {
@@ -36,18 +48,6 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           bgColor: "#867cb9",
           textColor: "#33286f",
           key: "key1",
-          isShow:
-            this.operatingSystem == "unknown" || this.operatingSystem == "iOS",
-        },
-        {
-          icon: "./static/img/home/icon_ptxz.png",
-          i18nKey: "home.menu.str2",
-          event: () => {
-            // openLink(apk);
-          },
-          bgColor: "#c9a17e",
-          textColor: "#563518",
-          key: "key2",
           isShow:
             this.operatingSystem == "unknown" || this.operatingSystem == "iOS",
         },
@@ -128,8 +128,8 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
                     {{$t(i18nKey)}}
                     <v-img
                       max-width="23px"
-                      v-if="key == 'key1'"
-                      src="./static/img/download/NEW.png"
+                      v-if="key == 'key2'"
+                      src="./static/img/download/hot.png"
                       class="absolute"
                       style="top: -8px; right: -23px"
                     ></v-img>
