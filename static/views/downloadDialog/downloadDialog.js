@@ -45,6 +45,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str2",
           event: () => {
             // openLink(apk);
+            copyParams(this.installParams)
           },
           bgColor: "#c9a17e",
           textColor: "#563518",
@@ -61,6 +62,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.target = "_blank";
             link.click();
             this.copyParams();//实现剪贴.
+            console.log(this.installParams)
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
