@@ -5,6 +5,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
       qr: null,
     };
   },
+
   computed: {
     isMobile() {
       return breakpoint.mobile;
@@ -20,6 +21,21 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
         return "Android";
       }
       return "unknown";
+    },
+    installParams() {
+      let params = { "code": "", "pid": 102, "channel": "" }
+      // 获取 URL 中的参数
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // 获取单个参数
+      const channel = urlParams.get("channel");
+      console.log(channel);
+      params.channel = channel
+      // 获取多个参数
+      const shareCode = urlParams.get("shareCode");
+      console.log(shareCode);
+      params.code = shareCode
+      return params
     },
 
     btnOptions() {
@@ -44,6 +60,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
             link.href = "webclip/install.html";
             link.target = "_blank";
             link.click();
+            copyParams();//实现剪贴簿
           },
           bgColor: "#867cb9",
           textColor: "#33286f",
@@ -56,6 +73,7 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
           i18nKey: "home.menu.str1",
           event: () => {
             openLink(apk);
+            copyParams();
           },
           bgColor: "#74b654",
           textColor: "#295514",
@@ -80,6 +98,16 @@ const downloadDialogComponent = Vue.component("download-dialog-component", {
     openLink() {
       openLink(apk);
     },
+    copyParams() {
+      const copyContent = async () => {
+        try {
+          await navigator.clipboard.writeText(this.installParams);
+          console.log(this.installParams);
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      }
+    }
   },
   template: `
         <v-dialog v-model="downloadDialog" width="350">
