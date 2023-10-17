@@ -4,22 +4,28 @@ const aboutComponent = Vue.component("about-component", {
       isHidden: true,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.isHidden = false;
-    }, overlayTime);
-  },
+  // created() {
+  //   setTimeout(() => {
+  //     this.isHidden = false;
+  //   }, overlayTime);
+  // },
   computed: {
     isMobile() {
       return breakpoint.mobile;
     },
   },
+  methods: {
+    onImageLoaded() {
+      // console.log('圖片載入完成');
+      this.isHidden = false;
+    },
+  },
   template: `
-  <v-sheet color="downloadBg" class="about-component" :class="{hidden: isHidden}">
+  <v-sheet color="downloadBg" class="about-component" :class="{hidden: isHidden}" v-image-loaded="onImageLoaded">
     <!-- h5 -->
     <template v-if="isMobile">
-      <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/h5/banner_01.png">
+      <v-sheet color="transparent" width="100%" class="relative d-flex justify-center">
+        <img class="contain" width="100%" src="./static/img/about/h5/banner_01.png">
         <v-sheet
           color="transparent"
           class="absolute d-flex flex-column align-center px-2 text-center"
@@ -27,8 +33,8 @@ const aboutComponent = Vue.component("about-component", {
           height="100%"
         >
           <div class="text-28" style="margin-top: 7%">
-            <span class="titleText--text">{{$t("about.str1")}}</span
-            ><span class="primary--text">ePOKER</span>
+            <span class="titleText--text">{{$t("about.str1_1")}}</span
+            ><span class="primary--text">{{$t("about.str1_2")}}</span>
           </div>
           <div class="titleText--text text-12">
             {{$t("about.str2")}}
@@ -36,12 +42,13 @@ const aboutComponent = Vue.component("about-component", {
         </v-sheet>
       </v-sheet>
       <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/h5/banner_02.png">
+        <img class="absolute" width="100%" height="100%" cover src="./static/img/about/h5/shu-bg.png">
         <v-sheet
           color="transparent"
-          class="absolute d-flex flex-column align-center"
+          class="d-flex flex-column align-center"
           width="100%"
           height="100%"
+          style="z-index: 1"
         >
           <div class="text-28 titleText--text" style="margin-top: 7%">
             {{$t("about.str3")}}
@@ -49,6 +56,7 @@ const aboutComponent = Vue.component("about-component", {
           <div class="titleText--text mt-2 text-12" style="padding: 0 10%">
             {{$t("about.str4")}}
           </div>
+          <v-img class="mt-n6" max-width="50%" min-width="300px" src="./static/img/about/h5/shu.png"></v-img>
         </v-sheet>
       </v-sheet>
       <v-sheet
@@ -76,7 +84,7 @@ const aboutComponent = Vue.component("about-component", {
             width="100%"
             height="50%"
             max-width="400"
-            class="d-flex justify-space-around mt-4"
+            class="d-flex justify-space-around mt-4 px-2"
           >
             <v-sheet
               color="#22272d"
@@ -135,26 +143,6 @@ const aboutComponent = Vue.component("about-component", {
               </v-sheet>
             </v-sheet>
           </v-sheet>
-        </v-sheet>
-      </v-sheet>
-      <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/h5/banner_04.png">
-        <v-sheet
-          color="transparent"
-          class="absolute d-flex flex-column align-center"
-          width="100%"
-          height="100%"
-          style="padding: 5% 10%"
-        >
-          <div class="text-28">
-            <span class="titleText--text">ePOKER</span
-            ><span class="primary--text">
-              {{$t("about.str11")}}
-            </span>
-          </div>
-          <div class="titleText--text mt-2 text-12">
-            {{$t("about.str12")}}
-          </div>
         </v-sheet>
       </v-sheet>
       <v-sheet
@@ -283,7 +271,7 @@ const aboutComponent = Vue.component("about-component", {
                 color="#22272d"
                 class="d-flex flex-column align-center justify-center rounded"
               >
-                <div class="primary--text text-38">120萬</div>
+                <div class="primary--text text-38">{{$t("about.str17")}}</div>
                 <div class="contentText--text">
                   {{$t("about.str8")}}
                 </div>
@@ -321,30 +309,6 @@ const aboutComponent = Vue.component("about-component", {
                 <div class="contentText--text">{{$t("about.str10")}}</div>
               </v-sheet>
             </v-sheet>
-          </v-sheet>
-        </v-sheet>
-      </v-sheet>
-      <v-sheet width="100%" class="relative d-flex justify-center">
-        <img width="100%" src="./static/img/about/banner_04.png">
-        <v-sheet
-          color="transparent"
-          class="absolute d-flex flex-column justify-center"
-          max-width="1140px"
-          width="100%"
-          height="100%"
-        >
-          <div class="text-38">
-            <span class="titleText--text">ePOKER</span
-            ><span class="primary--text">
-              {{$t("about.str11")}}
-            </span>
-          </div>
-          <v-sheet
-            color="transparent"
-            width="40%"
-            class="titleText--text mt-2"
-          >
-            {{$t("about.str12")}}
           </v-sheet>
         </v-sheet>
       </v-sheet>

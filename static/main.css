@@ -6,6 +6,7 @@
 @import "./views/support/support.css";
 @import "./views/bottom/bottom.css";
 @import "./views/use/use.css";
+@import "./views/downloadDialog/downloadDialog.css";
 
 .text-12 {
   font-size: 12px !important;
@@ -155,7 +156,7 @@ a {
   width: 100%;
   height: 45px;
   position: fixed;
-  bottom: 8%;
+  bottom: 0;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -168,7 +169,7 @@ a {
   transition: opacity 0.3s;
   font-size: 18px;
   background-image: url("./img/download/di.png");
-  background-size: cover;
+  background-size: 100%;
   z-index: 2;
 }
 .mob .download-btn {
@@ -183,4 +184,7 @@ a {
 }
 .mob .dialog-bg {
   background-image: url("./img/dialog/h5/di_xz.png");
+}
+.contain {
+  object-fit: contain;
 }

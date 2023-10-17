@@ -1,5 +1,5 @@
 .download-menu.v-list {
-  background: rgba(245, 210, 179, 0.4);
+  background: #3d3d3d;
 }
 .download-menu .v-list-item__title,.download-menu .v-list-item__icon {
   z-index: 1;
